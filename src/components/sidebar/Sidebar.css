@@ -1,7 +1,7 @@
 .sidebar {
   color: #fff;
   width: 50%;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 10px;
   display: grid;
   gap: 20px;

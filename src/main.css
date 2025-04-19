@@ -16,4 +16,5 @@ body {
   min-height: 100vh;
   position: relative;
   background: #666;
+  transition: 0.6s;
 }

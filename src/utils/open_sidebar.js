@@ -22,6 +22,8 @@ export const open_sidebar = () => {
   } else if (layout.style.transform === "none") {
     layout.removeEventListener("click", open_sidebar);
     main.style.pointerEvents = "";
-    sidebar.style.display = "none";
+    setTimeout(() => {
+      sidebar.style.display = "none";
+    }, 1000);
   }
 };

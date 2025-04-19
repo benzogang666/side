@@ -3,7 +3,7 @@
   width: 50%;
   height: 100%;
   padding: 10px;
-  display: grid;
+  display: none;
   gap: 20px;
   align-items: start;
   align-content: space-between;

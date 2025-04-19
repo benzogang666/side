@@ -9,7 +9,7 @@
   align-content: space-between;
   background: #303030;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }

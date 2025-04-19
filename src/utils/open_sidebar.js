@@ -4,6 +4,7 @@ export const open_sidebar = () => {
   const root = document.querySelector("#root");
   const layout = document.querySelector(".layout");
   const main = document.querySelector(".main");
+  const sidebar = document.querySelector(".sidebar");
 
   if (!layout) return;
 
@@ -17,8 +18,10 @@ export const open_sidebar = () => {
   if (layout.style.transform === "translate(50%, 0px)") {
     layout.addEventListener("click", open_sidebar);
     main.style.pointerEvents = "none";
+    sidebar.style.display = "grid";
   } else if (layout.style.transform === "none") {
     layout.removeEventListener("click", open_sidebar);
     main.style.pointerEvents = "";
+    sidebar.style.display = "none";
   }
 };

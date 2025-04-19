@@ -3,13 +3,13 @@
   width: 50%;
   height: 100%;
   padding: 10px;
-  display: none;
+  display: grid;
   gap: 20px;
   align-items: start;
   align-content: space-between;
   background: #303030;
   z-index: 1;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 }

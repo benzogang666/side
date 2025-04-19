@@ -18,12 +18,10 @@ export const open_sidebar = () => {
   if (layout.style.transform === "translate(50%, 0px)") {
     layout.addEventListener("click", open_sidebar);
     main.style.pointerEvents = "none";
-    sidebar.style.display = "grid";
+    sidebar.style.position = "fixed";
   } else if (layout.style.transform === "none") {
     layout.removeEventListener("click", open_sidebar);
     main.style.pointerEvents = "";
-    setTimeout(() => {
-      sidebar.style.display = "none";
-    }, 1000);
+    sidebar.style.position = "absolute";
   }
 };

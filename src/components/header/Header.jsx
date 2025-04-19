@@ -12,7 +12,7 @@ const Header = () => {
     <>
       <div className="header">
         <IoMenuOutline className="header-icon" onClick={open_sidebar} />
-        <div className="header-named">727</div>
+        <div className="header-named">727 specility</div>
         <IoSearchOutline
           className="header-icon"
           onClick={() => navigate("/search")}

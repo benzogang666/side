@@ -1,0 +1,97 @@
+.menu {
+  display: grid;
+  gap: 20px;
+}
+
+.menu-categories {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  justify-content: start;
+  border-radius: 15px;
+  overflow: scroll;
+}
+
+.menu-category {
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 100px auto;
+  border-radius: 15px;
+}
+
+.menu-category-image {
+  background: #4369ff;
+  border-radius: 15px;
+  transition: 0.6s;
+}
+
+.active-menu-category-image {
+  transform: scale(0.9);
+}
+
+.menu-category-named {
+  display: grid;
+  justify-self: center;
+}
+
+.menu-sub-categories {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  justify-content: start;
+  border-radius: 15px;
+  overflow: scroll;
+}
+
+.menu-sub-category {
+  padding: 6px 20px;
+  display: grid;
+  background: #efefef;
+  border-radius: 15px;
+  transition: 0.6s;
+  white-space: nowrap;
+}
+
+.active-menu-sub-category {
+  color: #fff;
+  background: #303030;
+}
+
+.menu-repository {
+  display: grid;
+  gap: 20px;
+}
+
+.menu-views {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-view-icon {
+  font-size: 25px;
+}
+
+.vertical-cards {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.horizon-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.receipt-navigate {
+  color: #fff;
+  padding: 10px 20px;
+  background: #303030;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 10px;
+  right:  10px;
+}

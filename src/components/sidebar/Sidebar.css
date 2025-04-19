@@ -1,0 +1,36 @@
+.sidebar {
+  color: #fff;
+  width: 50%;
+  height: 100vh;
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+  align-items: start;
+  align-content: space-between;
+  background: #303030;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-logo {
+  color: #ffab2c;
+}
+
+.sidebar-repository {
+  display: grid;
+  gap: 30px;
+}
+
+.sidebar-element {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.sidebar-element-icon {
+  font-size: 25px;
+}

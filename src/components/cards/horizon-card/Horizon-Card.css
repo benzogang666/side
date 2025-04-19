@@ -1,0 +1,51 @@
+.horizon-card {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 110px auto;
+  grid-auto-rows: 110px;
+  grid-auto-flow: column;
+  background: #f6f6f6;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px #aaa;
+}
+
+.hn-c-image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.hn-c-data {
+  padding: 5px 0;
+  display: grid;
+  align-content: space-between;
+}
+
+.hn-c-details {
+  font-size: 13.5px;
+  line-height: 1.5;
+  max-height: calc(1.5em * 2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hn-c-expenses {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hn-c-counter {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.hn-c-counter-icon {
+  font-size: 25px;
+}

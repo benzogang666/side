@@ -1,0 +1,17 @@
+.stamp {
+  padding: 0px 0px 10px 0px;
+  display: grid;
+  justify-content: center;
+}
+
+/* .stamp {
+  display: grid;
+  justify-content: center;
+}
+
+.stamp-named {
+  color: #fff;
+  padding: 5px 30px;
+  background: #303030;
+  border-radius: 15px 15px 0px 0px;
+} */

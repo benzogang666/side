@@ -9,33 +9,21 @@ const Search = () => {
   const [results, setResults] = useState([]);
 
   const handleSearch = (e) => {
-    const value = e.target.value;
-    setQuery(value);
+    const q = e.target.value.toLowerCase().trim();
+    setQuery(e.target.value);
+    if (!q) return setResults([]);
 
-    if (value.trim() === "") {
-      setResults([]);
-      return;
-    }
-
-    const lowerQuery = value.toLowerCase();
-    const found = [];
-
-    products.categories.forEach((category) => {
-      category.subcategories.forEach((subcategory) => {
-        subcategory.items.forEach((item) => {
-          const inName = item.name.toLowerCase().includes(lowerQuery);
-          const inDetails = item.details.toLowerCase().includes(lowerQuery);
-
-          if (inName || inDetails) {
-            found.push({
-              ...item,
-              category: category.name,
-              subcategory: subcategory.name,
-            });
-          }
-        });
-      });
-    });
+    const found = products.categories.flatMap((c) =>
+      c.subcategories.flatMap((s) =>
+        s.items
+          .filter(
+            (i) =>
+              i.name.toLowerCase().includes(q) ||
+              i.details.toLowerCase().includes(q)
+          )
+          .map((i) => ({ ...i, category: c.name, subcategory: s.name }))
+      )
+    );
 
     setResults(found);
   };
@@ -44,8 +32,8 @@ const Search = () => {
     <div className="search">
       <input
         type="text"
-        className="search-input"
-        placeholder="Поиск по продуктам..."
+        className="search-field"
+        placeholder="Поиск..."
         value={query}
         onChange={handleSearch}
       />

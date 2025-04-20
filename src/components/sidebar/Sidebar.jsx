@@ -12,37 +12,35 @@ import {
 
 import { NavLink } from "react-router";
 
-import { open_sidebar } from "../../utils/open_sidebar";
-
 const pages = [
   {
-    element: "Меню",
-    icon: <IoBookOutline className="sidebar-element-icon" />,
+    label: "Меню",
+    icon: <IoBookOutline className="sidebar-label-icon" />,
     path: "/menu",
   },
   {
-    element: "Вакансии",
-    icon: <IoPeopleOutline className="sidebar-element-icon" />,
+    label: "Вакансии",
+    icon: <IoPeopleOutline className="sidebar-label-icon" />,
     path: "/vacancies",
   },
   {
-    element: "Контакты",
-    icon: <IoMapOutline className="sidebar-element-icon" />,
+    label: "Контакты",
+    icon: <IoMapOutline className="sidebar-label-icon" />,
     path: "/contacts",
   },
   {
-    element: "Корзина",
-    icon: <IoCartOutline className="sidebar-element-icon" />,
+    label: "Корзина",
+    icon: <IoCartOutline className="sidebar-label-icon" />,
     path: "/cart",
   },
   {
-    element: "Отзывы",
-    icon: <IoChatbubbleEllipsesOutline className="sidebar-element-icon" />,
+    label: "Отзывы",
+    icon: <IoChatbubbleEllipsesOutline className="sidebar-label-icon" />,
     path: "/reviews",
   },
   {
-    element: "Бланк",
-    icon: <IoReaderOutline className="sidebar-element-icon" />,
+    label: "Бланк",
+    icon: <IoReaderOutline className="sidebar-label-icon" />,
     path: "/receipt",
   },
 ];
@@ -51,17 +49,12 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidebar">
-        <div className="sidebar-logo">727 coffee</div>
         <div className="sidebar-repository">
-          {pages.map(({ element, icon, path }) => (
-            <div className="sidebar-element" to={path} key={path}>
-              {icon} <div>{element}</div>
-            </div>
+          {pages.map(({ label, icon, path }) => (
+            <NavLink className="sidebar-label" to={path} key={path}>
+              {icon} <div>{label}</div>
+            </NavLink>
           ))}
-        </div>
-        <div className="sidebar-element" onClick={open_sidebar}>
-          <IoCloseCircleOutline className="sidebar-element-icon" />
-          <div>Закрыть</div>
         </div>
       </div>
     </>

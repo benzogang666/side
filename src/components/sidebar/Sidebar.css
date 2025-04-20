@@ -1,12 +1,11 @@
 .sidebar {
-  color: #fff;
-  width: 50%;
+  width: 100%;
   height: 100%;
   padding: 10px;
   display: grid;
   gap: 20px;
+  grid-auto-columns: auto 1fr auto;
   align-items: start;
-  align-content: space-between;
   background: #303030;
   z-index: 1;
   position: absolute;
@@ -14,16 +13,13 @@
   left: 0;
 }
 
-.sidebar-logo {
-  color: #ffab2c;
-}
-
 .sidebar-repository {
   display: grid;
   gap: 30px;
 }
 
-.sidebar-element {
+.sidebar-label {
+  color: #fff;
   display: grid;
   gap: 10px;
   grid-auto-flow: column;
@@ -31,6 +27,6 @@
   justify-content: start;
 }
 
-.sidebar-element-icon {
+.sidebar-label-icon {
   font-size: 25px;
 }

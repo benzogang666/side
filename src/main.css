@@ -11,9 +11,10 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 #root {
-  width: 100%;
-  min-height: 100vh;
-  background: #666;
-  position: relative;
+  height: 100vh;
 }
